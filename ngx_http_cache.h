@@ -52,6 +52,7 @@ typedef struct {
     time_t                           valid_sec;
     size_t                           body_start;
     off_t                            fs_size;
+    ngx_uint_t                       cur_of_sh;
 } ngx_http_file_cache_node_t;
 
 
@@ -117,7 +118,8 @@ typedef struct {
 
 
 struct ngx_http_file_cache_s {
-    ngx_http_file_cache_sh_t        *sh;
+    ngx_uint_t                       num_of_sh;
+    ngx_http_file_cache_sh_t        *sh[];
     ngx_slab_pool_t                 *shpool;
 
     ngx_path_t                      *path;
