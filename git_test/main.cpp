@@ -13,8 +13,9 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
-
-    return 0;
     int i=9;
+    int j=10;
+    return 0;
+   
 }
 
